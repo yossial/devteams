@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function IconCard({ Svg, title, content }) {
   return (
-    <div className="max-w-sm rounded overflow-hidden shadow-lg">
+    <div className="flex flex-col items-center +max-w-sm overflow-hidden bg-white mx-6 my-4 md:my-0 text-center">
       <Svg />
       <div className="px-6 py-4">
         <div className="font-bold text-xl mb-2">{title}</div>

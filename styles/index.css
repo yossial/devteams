@@ -45,6 +45,7 @@ section:first-of-type svg {
   margin-left: 1em;
 }
 
+
 @media (min-width: 1024px) {
   .top-navbar {
     display: inline-flex !important;
