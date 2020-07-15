@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+html,
+body {
+  scroll-behavior: smooth;
+}
+
+.gradient {
+  background: linear-gradient(to right, rgb(26, 41, 128), rgb(38, 208, 206));
+}
+
+.solid {
+  @apply bg-white text-gray-700 shadow py-3;
+}
+
+.transparent .active:not(.cta) {
+  @apply text-red-400 font-bold text-lg;
+}
+
+.solid .active:not(.cta) {
+  @apply text-red-600;
+}
+
+
+.nav a:not(.cta):hover {
+  @apply bg-lightgray;
+}
+
+.transparent {
+  @apply bg-transparent text-white;
+}
+
+.nav {
+  transition: background ease-in-out .2s;
+}
+
+.bg-lightgray {
+  background-color: rgba(0, 0, 0, .03);
+}
+
+section:first-of-type svg {
+  margin-left: 1em;
+}
+
+@media (min-width: 1024px) {
+  .top-navbar {
+    display: inline-flex !important;
+  }
+}
