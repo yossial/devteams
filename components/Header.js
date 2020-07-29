@@ -13,11 +13,12 @@ export default function header({ isSolid }) {
         <div>
           <Link href="/">
             <a className="text-3xl font-bold">
-              <span className="text-red-500">Dev</span><span className="text-gtay-200">Teams</span>
+              <span className="text-red-500">Dev</span>
+              <span className="text-gtay-200" style={{ fontFamily: 'cursive' }}>Teams</span>
             </a>
           </Link>
         </div>
-        <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} />
+        <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} isSolid={isSolid} />
         <div className={`md:flex align-middle items-center ${isOpen ? 'flex' : 'hidden'}`}>
           <ul className="flex flex-col md:flex-row">
             <li className={`${isOpen ? 'py-2' : ''}`}><Link activeClassName="active" href="/">

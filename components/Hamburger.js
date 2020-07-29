@@ -1,12 +1,12 @@
 import React from 'react'
 
-export default function hamburger({ isOpen, setIsOpen }) {
+export default function hamburger({ isOpen, setIsOpen, isSolid }) {
 
   const topClosed = {
     display: "block",
     height: "1px",
     width: "100%",
-    background: "white",
+    background: isOpen || isSolid ? 'black' : 'white',
     transitionTimingFunction: "ease",
     transitionDuration: "0.7s",
     borderRadius: "0px",
@@ -55,7 +55,6 @@ export default function hamburger({ isOpen, setIsOpen }) {
         top: '2em',
         right: '2em',
         transform: 'rotate(0deg)',
-        color: isOpen ? 'black' : 'white'
       }}
         className='md:hidden'
         onClick={() => setIsOpen(!isOpen)}
