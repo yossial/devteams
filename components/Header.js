@@ -22,18 +22,18 @@ export default function header({ isSolid }) {
         <div className={`md:flex align-middle items-center ${isOpen ? 'flex' : 'hidden'}`}>
           <ul className="flex flex-col md:flex-row">
             <li className={`${isOpen ? 'py-2' : ''}`}><Link activeClassName="active" href="/">
-              <a className={`px-4 py-2 ${isOpen ? 'hover:bg-darker' : ''}`}>Home</a></Link></li>
+              <a className={`px-4 py-2 ${isOpen ? 'hover:bg-darker' : ''}`} onClick={() => setIsOpen(false)}>Home</a></Link></li>
             <li className={`${isOpen ? 'py-2' : ''}`}><Link activeClassName="active" href="/#about">
-              <a className={`px-4 py-2 ${isOpen ? 'hover:bg-darker' : ''}`}>About Us</a></Link></li>
+              <a className={`px-4 py-2 ${isOpen ? 'hover:bg-darker' : ''}`} onClick={() => setIsOpen(false)}>About Us</a></Link></li>
             <li className={`${isOpen ? 'py-2' : ''}`}><Link activeClassName="active" href="/#faq">
-              <a className={`px-4 py-2 ${isOpen ? 'hover:bg-darker' : ''}`}>FAQs</a></Link></li>
+              <a className={`px-4 py-2 ${isOpen ? 'hover:bg-darker' : ''}`} onClick={() => setIsOpen(false)}> FAQs</a></Link></li>
             <li className={`${isOpen ? 'py-2' : ''}`}><Link activeClassName="active" href="/login">
-              <a className={`px-4 py-2 ${isOpen ? 'px-4 py-2 hover:bg-darker' : `${isSolid ? 'text-blue-600' : 'text-gray-600'} px-4 border border-white-400 rounded-lg ml-4`}`}>Login</a></Link></li>
+              <a className={`px-4 py-2 ${isOpen ? 'px-4 py-2 hover:bg-darker' : `${isSolid ? 'text-blue-600' : 'text-gray-600'} px-4 border border-white-400 rounded-lg ml-4`}`} onClick={() => setIsOpen(false)}>Login</a></Link></li>
             <li className={`${isOpen ? 'py-2' : ''}`}><Link activeClassName="active" href="/signup">
-              <a className={`px-4 py-2  ${isOpen ? 'hover:bg-darker' : 'cta bg-red-600 text-white rounded-lg ml-4 hover:bg-red-700'}`}>Get Started</a></Link></li>
+              <a className={`px-4 py-2  ${isOpen ? 'hover:bg-darker' : 'cta bg-red-600 text-white rounded-lg ml-4 hover:bg-red-700'}`} onClick={() => setIsOpen(false)}>Get Started</a></Link></li>
           </ul>
         </div>
-      </nav >
-    </header >
+      </nav>
+    </header>
   )
 }
