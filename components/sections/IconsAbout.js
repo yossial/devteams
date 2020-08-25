@@ -11,15 +11,15 @@ export default function IconsAbout() {
     <section className="flex justify-evenly items-center md:justify-center flex-col 
     sm:flex-row" id="about">
       <IconCard
-        Svg={FaRegLightbulb}
+        Icon={FaRegLightbulb}
         title="Create ideas"
         content="Lorem ipsum dolor, sit amet consectetur adipisicing elit." />
       <IconCard
-        Svg={FaAppStore}
+        Icon={FaAppStore}
         title="Build apps"
         content="Sequi non quia ab, ipsam consequuntur nesciunt" />
       <IconCard
-        Svg={FaHandsHelping}
+        Icon={FaHandsHelping}
         title="Help others"
         content="Natus sint dicta impedit doloremque tempore. Nemo!" />
     </ section>

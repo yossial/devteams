@@ -3,7 +3,7 @@ import IconsAbout from './sections/IconsAbout'
 
 export default function Sections() {
   return (
-    <div className="py-16 bg-gray-100">
+    <div className="pb-8 -mt-32 bg-gray-100">
       <IconsAbout />
     </div>
   )
