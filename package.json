@@ -2,12 +2,9 @@
   "name": "devote",
   "version": "0.1.0",
   "private": true,
-  "engines": {
-    "node": "14.x"
-  },
   "scripts": {
     "dev": "next",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start -p $PORT",
     "heroku-postbuild": "npm run build"
   },
