@@ -8,6 +8,8 @@ export default function Layout({ children }) {
   const [isActive, setisActive] = useState(false);
   const [isSolid, setIsSolid] = useState(false);
   const [scrollPos, setScrollpos] = useState(0);
+  const pagesWithHiddenFooter = ['login', 'signup'];
+  let isAuthPages = pagesWithHiddenFooter.indexOf(router.pathname.slice(1)) !== -1
   useEffect(() => {
     window.addEventListener('scroll', function () {
       setScrollpos(window.scrollY);
@@ -18,11 +20,12 @@ export default function Layout({ children }) {
       }
     });
   });
+
   return (
     <main>
-      <Header isSolid={router.pathname !== '/' || isSolid} />
+      <Header isSolid={isAuthPages || isSolid} />
       {children}
-      <Footer />
+      <Footer isHidden={isAuthPages} />
     </main>
   );
 

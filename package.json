@@ -9,6 +9,8 @@
     "heroku-postbuild": "npm run build"
   },
   "dependencies": {
+    "bcrypt": "^5.0.0",
+    "jsonwebtoken": "^8.5.1",
     "next": "9.4.4",
     "react": "16.13.1",
     "react-burger-menu": "^2.7.0",

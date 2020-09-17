@@ -6,6 +6,7 @@
 html,
 body {
   scroll-behavior: smooth;
+  scroll-margin: 0;
 }
 
 .gradient {
@@ -14,26 +15,16 @@ body {
 }
 
 .solid {
-  @apply bg-white text-gray-700 shadow py-3;
+  @apply bg-gray-100 text-gray-700 shadow py-3;
 }
 
-.transparent .active:not(.cta) {
-  @apply text-red-400 font-bold text-lg;
+.nav .active:not(.cta) {
+  @apply text-blue-500 font-semibold border-b border-gray-400;
 }
 
-.solid .active:not(.cta) {
-  @apply text-red-600;
-}
-
-
-.transparent a:not(.cta):hover {
+.nav a:not(.cta):hover {
   @apply bg-darker;
 }
-
-.solid a:not(.cta):hover {
-  @apply bg-darker;
-}
-
 
 .opened a:not(.cta):hover {
   @apply bg-darker;
@@ -53,6 +44,10 @@ body {
 
 .bg-darker {
   background-color: rgba(0, 0, 0, .05);
+}
+
+.scrollble {
+  scrollTop: 0
 }
 
 @media (min-width: 1024px) {

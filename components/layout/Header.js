@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
-import Link from '../components/Link'
+import Link from '../Link'
 import next from 'next'
-import Hamburger from '../components/Hamburger';
+import Hamburger from '../layout/Hamburger';
+import SiteLogo from '../../components/SiteLogo'
 
 export default function header({ isSolid }) {
   const [isOpen, setIsOpen] = useState(false)
@@ -10,14 +11,7 @@ export default function header({ isSolid }) {
     <header className={`${bgClass} nav w-screen px-20 py-5 fixed top-0 left-0 z-50 ${isOpen ? 'h-screen' : ''}`}
       id="navbar" >
       <nav className={`flex items-center justify-between ${isOpen ? 'flex-col' : ''}`}>
-        <div>
-          <Link href="/">
-            <a className="text-3xl font-bold">
-              <span className="text-red-500">Dev</span>
-              <span className="text-gray-400 sm:text-gray-700" style={{ fontFamily: 'cursive' }}>Teams</span>
-            </a>
-          </Link>
-        </div>
+        <SiteLogo />
         <Hamburger isOpen={isOpen} setIsOpen={setIsOpen} isSolid={isSolid} />
         <div className={`md:flex align-middle items-center ${isOpen ? 'flex' : 'hidden'}`}>
           <ul className="flex flex-col md:flex-row">
@@ -28,7 +22,7 @@ export default function header({ isSolid }) {
             <li className={`${isOpen ? 'py-2' : ''}`}><Link activeClassName="active" href="/#faq">
               <a className={`px-4 py-2 ${isOpen ? 'hover:bg-darker' : ''}`} onClick={() => setIsOpen(false)}> FAQs</a></Link></li>
             <li className={`${isOpen ? 'py-2' : ''}`}><Link activeClassName="active" href="/login">
-              <a className={`px-4 py-2 ${isOpen ? 'px-4 py-2 hover:bg-darker' : `${isSolid ? 'text-blue-600' : 'text-gray-600'} px-4 border border-white-400 rounded-lg ml-4`}`} onClick={() => setIsOpen(false)}>Login</a></Link></li>
+              <a className={`px-4 py-2 ${isOpen ? 'px-4 py-2 hover:bg-darker' : 'px-4 ml-4'}`} onClick={() => setIsOpen(false)}>Login</a></Link></li>
             <li className={`${isOpen ? 'py-2' : ''}`}><Link activeClassName="active" href="/signup">
               <a className={`px-4 py-2  ${isOpen ? 'hover:bg-darker' : 'cta bg-red-600 text-white rounded-lg ml-4 hover:bg-red-700'}`} onClick={() => setIsOpen(false)}>Get Started</a></Link></li>
           </ul>

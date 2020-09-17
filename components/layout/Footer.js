@@ -1,9 +1,9 @@
 import React from 'react'
 
-export default function footer() {
-  return (
+export default function footer({ isHidden }) {
+  return isHidden ? null : (
     <>
-      <footer className="bg-gray-100" id="faq">
+      <footer className="bg-gray-100">
         <div className="container pt-10 pb-6">
           <div className="flex flex-wrap">
             <div className="w-full md:w-1/4 text-center">

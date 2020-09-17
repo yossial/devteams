@@ -1,5 +1,5 @@
 import React from 'react'
-import IconCard from '../IconCard'
+import IconCard from './IconCard'
 import { FaRegLightbulb, FaAppStore, FaHandsHelping } from 'react-icons/fa';
 
 export default function IconsAbout() {
@@ -12,15 +12,15 @@ export default function IconsAbout() {
     sm:flex-row" id="about">
       <IconCard
         Icon={FaRegLightbulb}
-        title="Create ideas"
+        title="Take a part in great ideas"
         content="Lorem ipsum dolor, sit amet consectetur adipisicing elit." />
       <IconCard
         Icon={FaAppStore}
-        title="Build apps"
+        title="Gain experience deceloping apps"
         content="Sequi non quia ab, ipsam consequuntur nesciunt" />
       <IconCard
         Icon={FaHandsHelping}
-        title="Help others"
+        title="Contribute to the community"
         content="Natus sint dicta impedit doloremque tempore. Nemo!" />
     </ section>
   )

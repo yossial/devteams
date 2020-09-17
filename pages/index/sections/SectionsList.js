@@ -1,9 +1,9 @@
 import React from 'react'
-import IconsAbout from './sections/IconsAbout'
+import IconsAbout from './IconsAbout'
 
 export default function Sections() {
   return (
-    <div className="pb-8 sm:-mt-32 bg-gray-100">
+    <div className="mt-4 py-8 bg-white">
       <IconsAbout />
     </div>
   )
