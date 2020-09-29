@@ -8,6 +8,12 @@
 # testing
 /coverage
 
+# config
+/config/dev.js
+
+# certs
+/certs
+
 # next.js
 /.next/
 /out/
