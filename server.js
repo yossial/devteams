@@ -6,6 +6,7 @@ const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const glob = require('glob')
 const next = require('next')
+const cookieParser = require('cookie-parser')
 
 const dev = process.env.NODE_ENV !== 'production'
 const port = process.env.port || 3000
@@ -13,14 +14,19 @@ const app = next({ dev })
 
 const routes = require('./routes/routes')
 const routerHandler = routes.getRequestHandler(app)
+const authRoutes = require('./routes/authRoutes')
 
 const keys = require('./config/keys')
 
 app.prepare().then(() => {
+
+  server.use(express.json());
   // Parse application/x-www-form-urlencoded
-  server.use(bodyParser.urlencoded({ extended: false }))
+  server.use(bodyParser.urlencoded({ extended: false }));
   // Parse application/json
-  server.use(bodyParser.json())
+  server.use(bodyParser.json());
+
+  server.use(cookieParser());
 
   // Allows for cross origin domain request:
   server.use(function (req, res, next) {
@@ -49,6 +55,7 @@ app.prepare().then(() => {
   // Next.js page routes
   server.get('*', routerHandler)
 
+  server.use(authRoutes)
   // Start server
   server.listen(port, () => console.log(`> running on http://localhost:${port}/`))
 })

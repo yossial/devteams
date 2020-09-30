@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function FloatingLabelInput({ type, name, children }) {
+export default function FloatingLabelInput({ type, name, children, value, handleChange }) {
   const [active, setActive] = React.useState(false);
 
   function handleActivation(e) {
@@ -8,7 +8,7 @@ export default function FloatingLabelInput({ type, name, children }) {
   }
 
   return (
-    <div className="relative border rounded mb-2 bg-white text-black border-gray-500 border-opacity-25">
+    <div className="relative border rounded bg-white text-black border-gray-500 border-opacity-25">
       <input
         className={[
           "outline-none w-full rounded bg-gray-100 text-base transition-all duration-200 ease-in-out py-2 px-4",
@@ -17,7 +17,9 @@ export default function FloatingLabelInput({ type, name, children }) {
         id={name}
         name={name}
         type={type}
-        onChange={handleActivation}
+        onKeyUp={handleActivation}
+        value={value}
+        onChange={(e) => { handleChange(e.target.value) }}
       />
       <label
         className={[
