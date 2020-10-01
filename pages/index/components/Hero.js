@@ -10,7 +10,7 @@ export default function Hero() {
         <div className="flex flex-row gap-4 container items-center justify-center mx-auto py-10 sm:z-1">
           <div className="txt flex flex-col gap-2">
             <h2 className="text-2xl sm:text-xl md:text-3xl font-bold mb-0 xs:mb-2 text-white sm:text-black">
-              Develop. Contribute. collaborate</h2>
+              Develop. Contribute. Collaborate</h2>
             <h3 className="text-xl md:text-2xl mb-2 text-gray-200 sm:text-gray-700">
               Create apps for non-profit organizations</h3>
             <section className="my-4 text-xl max-w-md md:max-w-full text-gray-200 sm:text-gray-700">
