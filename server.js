@@ -9,7 +9,7 @@ const next = require('next')
 const cookieParser = require('cookie-parser')
 
 const dev = process.env.NODE_ENV !== 'production'
-const port = process.env.port || 3000
+const port = process.env.PORT || 3000
 const app = next({ dev })
 
 const routes = require('./routes/routes')
