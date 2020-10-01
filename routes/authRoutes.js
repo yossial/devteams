@@ -16,17 +16,17 @@ const handleErrors = (err) => {
     password: ''
   }
 
-  //incorrect email
-  if (err.message === 'incorrect email') {
-    errors.email = 'Email not exist';
-    return errors;
-  }
+  // //incorrect email
+  // if (err.message === 'incorrect email') {
+  //   errors.email = 'Account not exist'
+  //   return errors;
+  // }
 
-  //incorrect password
-  if (err.message === 'incorrect password') {
-    errors.password = 'Password is wrong';
-    return errors;
-  }
+  // //incorrect password
+  // if (err.message === 'incorrect password') {
+  //   errors.password = 'Password is wrong';
+  //   return errors;
+  // }
 
 
   //duplicate error
@@ -36,9 +36,10 @@ const handleErrors = (err) => {
   }
   //validation errors
   if (err.message.includes('user validation failed')) {
-    Object.values(err.errors).forEach(({ properties }) => {
-      errors[properties.path] = properties.message;
-    })
+    // Object.values(err.errors).forEach(({ properties }) => {
+    //   errors[properties.path] = properties.message;
+    // })
+    throw Error("validation feild");
   }
   return errors;
 }
@@ -55,8 +56,8 @@ router.post('/api/login', async (req, res) => {
     res.cookie('jwt', token, { httpOnly: true, maxAge: MAX_AGE * 1000 });//,secure: true});
     res.status(200).json({ user: user._id });
   } catch (err) {
-    let errors = handleErrors(err);
-    res.status(400).json({ errors });
+    //let errors = handleErrors(err);
+    res.status(400).json({ err: err.message });
   }
 })
 

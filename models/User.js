@@ -43,9 +43,11 @@ userSchema.statics.login = async function (email, password) {
     if (auth) {
       return user;
     }
-    throw Error('incorrect password');
+    // throw Error('incorrect password');
+    throw Error('Please provide a valid username and password');
   }
-  throw Error('incorrect email');
+  throw Error('Please provide a valid username and password');
+  // throw Error('incorrect email');
 };
 
 
