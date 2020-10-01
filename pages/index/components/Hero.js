@@ -16,8 +16,8 @@ export default function Hero() {
             <section className="my-4 text-xl max-w-md md:max-w-full text-gray-200 sm:text-gray-700">
               <h4>
                 Gain valuable experience as a developer.</h4>
-              <h4>Expand your Colleagues network by collaborating with other developers.</h4>
-              <h4>Contribute to the community by making apps that will improve people's life.</h4>
+              <h4>Expand your Colleagues network, Collaborate with other developers.</h4>
+              <h4>Contribute to the community, create apps that will help people live a better life.</h4>
             </section>
             <div className="mt-4"><strong className="pt-8 text-xl sm:text-lg text-gray-200 sm:text-gray-700">Join us and start your journey</strong></div>
             <Link href="/signup">

@@ -7,11 +7,13 @@ export default function signup() {
   return (
     <div>
       <div className="container mt-10">
-        <section className="flex flex-row justify-around max-w-4xl mx-auto">
-          <div className="w-5/12">
+        <section className="flex flex-col md:flex-row justify-around max-w-4xl mx-auto">
+          <div className="w-full md:w-5/12">
             <div className="card bg-white text-center py-10 px-2
             hover:bg-indigo-50 transition duration-300 ease-in cursor-pointer">
-              <DrawDev />
+              <div className="max-w-sm lg:max-w-full overflow-x-hidden">
+                <DrawDev />
+              </div>
               <div className="mx-auto">
                 <h1 className="text-3xl font-semibold pt-6 py-4">Developer</h1>
                 <p className="pb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, eum.</p>
@@ -24,10 +26,12 @@ export default function signup() {
 
             </div>
           </div>
-          <div className="w-5/12">
+          <div className="w-full md:w-5/12">
             <div className="card bg-white text-center py-10 px-2
             hover:bg-red-50 transition duration-300 ease-in cursor-pointer">
-              <DrawOrg />
+              <div className="max-w-sm lg:max-w-full overflow-x-hidden">
+                <DrawOrg />
+              </div>
               <div className="mx-auto">
                 <h1 className="text-3xl font-semibold pt-6 py-4">Organization</h1>
                 <p className="pb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam harum omnis iure.</p>
@@ -40,7 +44,7 @@ export default function signup() {
 
             </div>
           </div>
-          <div className="vertical divider uppercase font-semibold">Or</div>
+          <div className="vertical divider uppercase font-semibold hidden md:block">Or</div>
         </section>
       </div>
     </div>
