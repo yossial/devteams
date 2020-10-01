@@ -22,9 +22,11 @@ export default function Layout({ children }) {
   });
 
   return (
-    <main>
+    <main className={`${!isAuthPages ? 'mainGrid' : 'secondaryGrid bg-gray-50'}`}>
       <Header isSolid={isAuthPages || isSolid} />
-      {children}
+      <div className="content">
+        {children}
+      </div>
       <Footer isHidden={isAuthPages} />
     </main>
   );

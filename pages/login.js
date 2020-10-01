@@ -42,7 +42,7 @@ export default function login() {
   return (
     <>
       <section className="bg-gray-100">
-        <div className="mx-auto pt-40 pb-20 max-w-lg">
+        <div className="mx-auto pb-20 max-w-lg">
           <div className="container">
             <form onSubmit={handleSubmit(onSubmit)}
               className="font-sans bg-white text-sm rounded shadow-md w-full max-w-screen-md mx-auto px-8 pt-6 pb-8 mb-4">

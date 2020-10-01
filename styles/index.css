@@ -9,6 +9,33 @@ body {
   scroll-margin: 0;
 }
 
+.mainGrid {
+  display: grid;
+  grid-template-rows: auto auto auto;
+}
+
+.secondaryGrid {
+  height: 100vh;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  row-gap: 2rem;
+  grid-template-areas:
+    'header'
+    'content'
+}
+
+.secondaryGrid .header {
+  grid-area: header;
+}
+
+.secondaryGrid .content {
+  grid-area: content;
+}
+
+.card {
+  @apply rounded overflow-hidden shadow-lg;
+}
+
 .gradient {
   position: relative;
   background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(20, 72, 140, 1) 0%, rgba(7, 121, 222, 1) 90%)
@@ -31,7 +58,7 @@ body {
 }
 
 .transparent {
-  @apply bg-transparent text-gray-600;
+  @apply bg-blue-800 text-gray-600;
 }
 
 .nav {
@@ -48,6 +75,44 @@ body {
 
 .scrollble {
   scrollTop: 0
+}
+
+.vertical.divider {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  margin: 0;
+  padding: 0;
+  width: auto;
+  height: 37%;
+  line-height: 0;
+  text-align: center;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+.vertical.divider:after,
+.vertical.divider:before {
+  position: absolute;
+  left: 50%;
+  content: '';
+  z-index: 3;
+  border-left: 1px solid rgba(34, 36, 38, .15);
+  border-right: 1px solid rgba(255, 255, 255, .1);
+  width: 0%;
+  height: calc(100% - 1.5rem);
+}
+
+.vertical.divider:before {
+  top: -100%;
+  background-color: #fff;
+}
+
+.vertical.divider:after {
+  background-color: #fff;
+  top: auto;
+  bottom: 0;
 }
 
 @media (min-width: 1024px) {

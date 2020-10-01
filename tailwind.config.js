@@ -1,3 +1,5 @@
+const defaultTheme = require('tailwindcss/defaultTheme')
+
 module.exports = {
   purge: [],
   theme: {
@@ -26,8 +28,21 @@ module.exports = {
         xl: '5rem',
       }
     },
-
     extend: {
+      colors: {
+        gray: {
+          50: '#fbfdfd',
+          ...defaultTheme.colors.gray
+        },
+        red: {
+          50: '#fffafa',
+          ...defaultTheme.colors.red
+        },
+        indigo: {
+          50: '#f2f7ff',
+          ...defaultTheme.colors.indigo
+        }
+      },
       height: theme => ({
         "75": "75vh",
         "85": "85vh",

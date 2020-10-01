@@ -6,9 +6,9 @@ import SiteLogo from '../../components/SiteLogo'
 
 export default function header({ isSolid }) {
   const [isOpen, setIsOpen] = useState(false)
-  let bgClass = isOpen ? 'opened bg-gray-100' : isSolid ? 'solid' : 'transparent';
+  let bgClass = isOpen ? 'opened bg-gray-100' : isSolid ? 'solid' : 'transparent sm:bg-gray-100';
   return (
-    <header className={`${bgClass} nav w-screen px-20 py-5 fixed top-0 left-0 z-50 ${isOpen ? 'h-screen' : ''}`}
+    <header className={`header ${bgClass} nav w-screen px-20 py-5 sticky top-0 left-0 z-50 ${isOpen ? 'h-screen' : ''}`}
       id="navbar" >
       <nav className={`flex items-center justify-between ${isOpen ? 'flex-col' : ''}`}>
         <SiteLogo />
