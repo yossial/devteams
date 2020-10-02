@@ -13,7 +13,7 @@ export default function Layout({ children }) {
   useEffect(() => {
     window.addEventListener('scroll', function () {
       setScrollpos(window.scrollY);
-      if (window.scrollY > 50) {
+      if (window.scrollY > 100) {
         setIsSolid(true);
       } else {
         setIsSolid(false);
