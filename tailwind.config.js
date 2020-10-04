@@ -43,6 +43,10 @@ module.exports = {
           ...defaultTheme.colors.indigo
         }
       },
+      backgroundOpacity: {
+        '01': '0.1',
+        '003': '0.03',
+      },
       height: theme => ({
         "75": "75vh",
         "85": "85vh",

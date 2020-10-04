@@ -46,14 +46,15 @@ export default function login() {
         <div className="flex-1 md:flex-initial md:mx-auto md:mt-10 max-w-full md:max-w-2xl">
           <div className="md:container">
             <form onSubmit={handleSubmit(onSubmit)}
-              className="font-sans bg-white text-sm rounded shadow-md mx-4 md:mx-auto px-8 md:px-12 pb-8 mb-4">
+              className="bg-white text-sm rounded shadow-md mx-4 md:mx-auto px-8 md:px-12 pb-8 mb-4">
               <FaUser className="mx-auto text-6xl text-gray-500 relative"
                 style={{ top: '-1.5rem' }} />
-              <h1 className="mx-auto text-center text-2xl font-semibold text-gray-900 pb-4"
-                style={{ fontFamily: 'Nunito' }}>Log In</h1>
+              <h1 className="mx-auto text-center text-xl font-semibold text-gray-900"
+                style={{ fontFamily: 'Nunito' }}>DevTeams</h1>
+              <h2 className="mx-auto text-center text-lg text-gray-600 pb-5">Welcome Back!</h2>
               <div className="formField mb-4">
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 flex items-center pl-2">
+                  <div className="input-icon">
                     <AiOutlineUser className="text-gray-400 text-2xl" />
                   </div>
                   <input name="email" type="text" placeholder="Username"
@@ -66,7 +67,7 @@ export default function login() {
               </div>
               <div className="formField">
                 <div className="relative">
-                  <div className="absolute inset-y-0 left-0 flex items-center pl-2">
+                  <div className="input-icon">
                     <AiOutlineLock className="text-gray-400 text-2xl" />
                   </div>
                   <input name="password" type="password" placeholder="Password"
