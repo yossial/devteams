@@ -18,9 +18,6 @@
     @apply bg-blue-800 text-white shadow;
   }
 
-  .secondaryGrid .solid-mobile {
-    @apply bg-gray-700 text-white;
-  }
 
   .solid {
     @apply bg-gray-100 text-gray-700 shadow;
@@ -61,10 +58,6 @@ body {
   @apply rounded overflow-hidden shadow-lg;
 }
 
-.secondaryGrid .nav .active:not(.cta) {
-  @apply text-green-300;
-}
-
 .nav .active:not(.cta) {
   @apply text-green-500 font-semibold border-b border-gray-400;
 }
@@ -73,36 +66,17 @@ body {
   @apply border-transparent text-green-500;
 }
 
-.nav a:not(.cta):hover {
-  @apply bg-darker;
-}
-
-.secondaryGrid nav a:not(.cta):hover {
-  @apply .bg-darker-secondary;
-}
-
-.opened a:not(.cta):hover {
-  @apply bg-darker;
-}
 
 .nav {
   transition: background ease-in-out .2s;
 }
 
 .bg-lighter {
-  background-color: rgba(255, 255, 255, .1);
+  background-color: rgba(255, 255, 255, .5);
 }
 
 .bg-darker {
   background-color: rgba(0, 0, 0, .05);
-}
-
-.bg-lighter-secondary {
-  background-color: rgba(255, 255, 255, .3);
-}
-
-.bg-darker-secondary {
-  background-color: rgba(0, 0, 0, .1);
 }
 
 .scrollble {
@@ -114,6 +88,15 @@ body {
   background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(20, 72, 140, 1) 0%, rgba(7, 121, 222, 1) 90%)
 }
 
+.bg-gradient {
+  background: #000428;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #004e92, #000428);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #004e92, #000428);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
 
 .vertical.divider {
   position: absolute;
@@ -151,6 +134,10 @@ body {
   background-color: #fff;
   top: auto;
   bottom: 0;
+}
+
+.input-icon {
+  @apply absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none;
 }
 
 @media (min-width: 1024px) {
