@@ -81,7 +81,7 @@ export default function login() {
               <div className="flex flex-col mt-4">
                 <button type="submit"
                   className="shadow-md py-3 px-4 mt-0 sm:mt-2 text-green-100
-                  cursor-pointer bg-teal-600 hover:bg-teal-700 
+                  cursor-pointer bg-indigo-500 hover:bg-indigo-700 
                   rounded tr-mt text-center w-full">Sign In</button>
                 <a className="inline-block align-baseline text-sm 
                 text-gray-600 hover:text-gray-900 my-2" href="#">
