@@ -24,15 +24,15 @@ export default function Hero() {
             <div className="flex flex-row gap-2">
               <Link href="/signup">
                 <a className="bg-red-600 hover:bg-red-700 text-center 
-                text-white font-semibold py-3 px-4 mt-4 w-48 shadow-lg tracking-wider 
+                text-white font-semibold py-3 px-4 mt-4 w-32 sm:w-48 shadow-lg tracking-wider 
                 transition duration-300 ease-in">
                   Start Now
               </a>
               </Link>
               <Link href="/#sections">
-                <a className="bg-gray-200 hover:bg-gray-500 text-gray-700 hover:text-white
-               text-center font-semibold py-3 px-4 mt-4 w-48 shadow-lg tracking-wider 
-               transition-background duration-300 ease-in">
+                <a className="bg-gray-600 text-gray-400 hover:bg-gray-700
+               text-center font-semibold py-3 px-4 mt-4 w-32 sm:w-48 shadow-lg tracking-wider 
+               transition duration-300 ease-in">
                   Learn More
               </a>
               </Link>
