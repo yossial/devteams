@@ -2,6 +2,32 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Sansita+Swashed&family=Nunito&display=swap');
+
+
+@responsive {
+  .transparent-mobile {
+    @apply bg-blue-800 text-white;
+  }
+
+  .transparent {
+    @apply bg-gray-100 text-gray-600;
+  }
+
+  .solid-mobile {
+    @apply bg-blue-800 text-white shadow;
+  }
+
+  .secondaryGrid .solid-mobile {
+    @apply bg-gray-700 text-white;
+  }
+
+  .solid {
+    @apply bg-gray-100 text-gray-700 shadow;
+  }
+
+}
+
 
 html,
 body {
@@ -18,7 +44,6 @@ body {
   height: 100vh;
   display: grid;
   grid-template-rows: auto 1fr;
-  row-gap: 2rem;
   grid-template-areas:
     'header'
     'content'
@@ -36,29 +61,28 @@ body {
   @apply rounded overflow-hidden shadow-lg;
 }
 
-.gradient {
-  position: relative;
-  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(20, 72, 140, 1) 0%, rgba(7, 121, 222, 1) 90%)
-}
-
-.solid {
-  @apply bg-gray-100 text-gray-700 shadow py-3;
+.secondaryGrid .nav .active:not(.cta) {
+  @apply text-green-300;
 }
 
 .nav .active:not(.cta) {
-  @apply text-blue-500 font-semibold border-b border-gray-400;
+  @apply text-green-500 font-semibold border-b border-gray-400;
+}
+
+.opened .nav .active:not(.cta) {
+  @apply border-transparent text-green-500;
 }
 
 .nav a:not(.cta):hover {
   @apply bg-darker;
 }
 
-.opened a:not(.cta):hover {
-  @apply bg-darker;
+.secondaryGrid nav a:not(.cta):hover {
+  @apply .bg-darker-secondary;
 }
 
-.transparent {
-  @apply bg-blue-800 text-gray-600;
+.opened a:not(.cta):hover {
+  @apply bg-darker;
 }
 
 .nav {
@@ -73,9 +97,23 @@ body {
   background-color: rgba(0, 0, 0, .05);
 }
 
+.bg-lighter-secondary {
+  background-color: rgba(255, 255, 255, .3);
+}
+
+.bg-darker-secondary {
+  background-color: rgba(0, 0, 0, .1);
+}
+
 .scrollble {
   scrollTop: 0
 }
+
+.gradient {
+  position: relative;
+  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(20, 72, 140, 1) 0%, rgba(7, 121, 222, 1) 90%)
+}
+
 
 .vertical.divider {
   position: absolute;
