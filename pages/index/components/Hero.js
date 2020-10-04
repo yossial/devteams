@@ -21,11 +21,23 @@ export default function Hero() {
               <h4>Contribute to the community, create apps that will help people live a better life.</h4>
             </section>
             <div className="mt-4"><strong className="pt-8 text-xl sm:text-lg text-gray-200">Join us and start your journey</strong></div>
-            <Link href="/signup">
-              <a className="bg-red-600 hover:bg-red-700 text-center text-white font-semibold py-3 px-4 mt-4 w-48 shadow-lg tracking-wider">
-                Start Now
-          </a>
-            </Link>
+            <div className="flex flex-row gap-2">
+              <Link href="/signup">
+                <a className="bg-red-600 hover:bg-red-700 text-center 
+                text-white font-semibold py-3 px-4 mt-4 w-48 shadow-lg tracking-wider 
+                transition duration-300 ease-in">
+                  Start Now
+              </a>
+              </Link>
+              <Link href="/#sections">
+                <a className="bg-gray-200 hover:bg-gray-500 text-gray-700 hover:text-white
+               text-center font-semibold py-3 px-4 mt-4 w-48 shadow-lg tracking-wider 
+               transition-background duration-300 ease-in">
+                  Learn More
+              </a>
+              </Link>
+            </div>
+
 
           </div>
           <div className="draw hidden sm:flex sm:w-4/12">

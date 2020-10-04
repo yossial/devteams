@@ -48,7 +48,7 @@ export default function login() {
             <form onSubmit={handleSubmit(onSubmit)}
               className="bg-white text-sm rounded shadow-md mx-4 md:mx-auto px-8 md:px-12 pb-8 mb-4">
               <FaUser className="mx-auto text-6xl text-gray-500 relative"
-                style={{ top: '-1.5rem' }} />
+                style={{ top: '-1rem' }} />
               <h1 className="mx-auto text-center text-xl font-semibold text-gray-900"
                 style={{ fontFamily: 'Nunito' }}>DevTeams</h1>
               <h2 className="mx-auto text-center text-lg text-gray-600 pb-5">Welcome Back!</h2>
@@ -80,7 +80,7 @@ export default function login() {
               </div>
               <div className="flex flex-col mt-4">
                 <button type="submit"
-                  className="shadow-md py-3 px-4 text-green-100
+                  className="shadow-md py-3 px-4 mt-0 sm:mt-2 text-green-100
                   cursor-pointer bg-teal-600 hover:bg-teal-700 
                   rounded tr-mt text-center w-full">Sign In</button>
                 <a className="inline-block align-baseline text-sm 

@@ -3,7 +3,7 @@ import { HiGlobeAlt, HiScale, HiLightningBolt, HiAnnotation } from 'react-icons/
 
 export default function FeatureSection() {
   return (
-    <div className="py-12 bg-white">
+    <div className="py-12 bg-white" id="about">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
           <p className="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase">DevTeams</p>

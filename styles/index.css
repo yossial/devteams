@@ -4,28 +4,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inknut+Antiqua&family=Sansita+Swashed&family=Nunito&display=swap');
 
-
-@responsive {
-  .transparent-mobile {
-    @apply bg-blue-800 text-white;
-  }
-
-  .transparent {
-    @apply bg-gray-100 text-gray-600;
-  }
-
-  .solid-mobile {
-    @apply bg-blue-800 text-white shadow;
-  }
-
-
-  .solid {
-    @apply bg-gray-100 text-gray-700 shadow;
-  }
-
-}
-
-
 html,
 body {
   scroll-behavior: smooth;
@@ -34,24 +12,7 @@ body {
 
 .mainGrid {
   display: grid;
-  grid-template-rows: auto auto auto;
-}
-
-.secondaryGrid {
-  height: 100vh;
-  display: grid;
-  grid-template-rows: auto 1fr;
-  grid-template-areas:
-    'header'
-    'content'
-}
-
-.secondaryGrid .header {
-  grid-area: header;
-}
-
-.secondaryGrid .content {
-  grid-area: content;
+  grid-template-rows: 1fr auto;
 }
 
 .card {
@@ -69,18 +30,6 @@ body {
 
 .nav {
   transition: background ease-in-out .2s;
-}
-
-.bg-lighter {
-  background-color: rgba(255, 255, 255, .5);
-}
-
-.bg-darker {
-  background-color: rgba(0, 0, 0, .05);
-}
-
-.scrollble {
-  scrollTop: 0
 }
 
 .gradient {
@@ -138,10 +87,4 @@ body {
 
 .input-icon {
   @apply absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none;
-}
-
-@media (min-width: 1024px) {
-  .top-navbar {
-    display: inline-flex !important;
-  }
 }

@@ -7,6 +7,7 @@ export default function Layout({ children }) {
   const router = useRouter();
   const [isActive, setisActive] = useState(false);
   const [isSolid, setIsSolid] = useState(false);
+  const [isOpen, setIsOpen] = useState(false)
   const [scrollPos, setScrollpos] = useState(0);
   const pagesWithHiddenFooter = ['login', 'signup'];
   let isAuthPages = pagesWithHiddenFooter.indexOf(router.pathname.slice(1)) !== -1
@@ -22,12 +23,14 @@ export default function Layout({ children }) {
   });
 
   return (
-    <div className={`${!isAuthPages ? 'mainGrid' : 'secondaryGrid bg-gray-50'}`}>
-      <Header isSolid={isAuthPages || isSolid} isSecondaryGrid={isAuthPages} />
-      <main>
-        {children}
-      </main>
-      <Footer isHidden={isAuthPages} />
+    <div className="min-h-screen">
+      <Header isOpen={isOpen} handleOpen={val => setIsOpen(val)} isSolid={isAuthPages || isSolid} />
+      <div className="mainGrid min-h-screen91">
+        <main className={isOpen ? 'overflow-hidden' : ''}>
+          {children}
+        </main>
+        <Footer />
+      </div>
     </div>
   );
 
