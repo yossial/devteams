@@ -6,7 +6,7 @@ export default function hamburger({ isOpen, setIsOpen, isSolid }) {
     display: "block",
     height: "1px",
     width: "100%",
-    background: isOpen || isSolid ? 'black' : 'white',
+    //background: isOpen || isSolid ? 'black' : 'white',
     transitionTimingFunction: "ease",
     transitionDuration: "0.7s",
     borderRadius: "0px",
@@ -18,7 +18,7 @@ export default function hamburger({ isOpen, setIsOpen, isSolid }) {
 
   const topOpen = {
     ...topClosed,
-    background: 'black',
+    //background: 'black',
     transform: "translate3d(0px, 7.5px, 0px) rotate(45deg)",
   }
 
@@ -32,7 +32,7 @@ export default function hamburger({ isOpen, setIsOpen, isSolid }) {
 
   const middleOpen = {
     ...middleClosed,
-    background: 'black',
+    //background: 'black',
     opacity: "0",
   }
 
@@ -52,17 +52,20 @@ export default function hamburger({ isOpen, setIsOpen, isSolid }) {
         width: '1.2em',
         height: '1.2em',
         position: 'fixed',
-        top: '2em',
+        top: '1.5em',
         right: '2em',
         transform: 'rotate(0deg)',
       }}
         className='md:hidden'
         onClick={() => setIsOpen(!isOpen)}
       >
-        <span style={isOpen ? topOpen : topClosed}></span>
-        <span style={isOpen ? middleOpen : middleClosed}></span>
-        <span style={isOpen ? lastOpen : lastClosed}></span>
-      </div>
-    </div>
+        <span style={isOpen ? topOpen : topClosed}
+          className={`${isOpen ? 'bg-black' : 'bg-white'}`}></span>
+        <span style={isOpen ? middleOpen : middleClosed}
+          className={`${isOpen ? 'bg-black' : 'bg-white'}`}></span>
+        <span style={isOpen ? lastOpen : lastClosed}
+          className={`${isOpen ? 'bg-black' : 'bg-white'}`}></span >
+      </div >
+    </div >
   )
 }

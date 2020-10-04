@@ -4,7 +4,7 @@ export default function projects() {
   return (
     <div>
       <h1>Projects</h1>
-      <p>COntent here</p>
+      <p>Content here</p>
     </div>
   )
 }

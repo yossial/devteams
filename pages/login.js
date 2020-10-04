@@ -3,7 +3,8 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers';
 import * as yup from "yup";
 import SiteLogo from '../components/SiteLogo'
-import { FaUserCircle } from "react-icons/fa";
+import { FaUser } from "react-icons/fa";
+import { AiOutlineUser, AiOutlineLock } from "react-icons/ai";
 
 import FormError from '../components/FormError'
 
@@ -41,31 +42,41 @@ export default function login() {
 
   return (
     <>
-      <section className="bg-gray-100">
-        <div className="mx-auto pb-20 max-w-lg">
-          <div className="container">
+      <section className="flex flex-wrap items-center justify-center h-full">
+        <div className="flex-1 md:flex-initial md:mx-auto md:mt-10 max-w-full md:max-w-2xl">
+          <div className="md:container">
             <form onSubmit={handleSubmit(onSubmit)}
-              className="font-sans bg-white text-sm rounded shadow-md w-full max-w-screen-md mx-auto px-8 pt-6 pb-8 mb-4">
-              <h1 className="mx-auto text-center text-xl text-gray-900 p-4">Log in to your account</h1>
-              <FaUserCircle className="mx-auto text-5xl mb-8" />
-              <div className="flex flex-col mb-4">
-                <label htmlFor="email" className="my-2">Username</label>
-                <input name="email" type="text"
-                  className="outline-none w-full rounded bg-gray-100 text-base 
+              className="font-sans bg-white text-sm rounded shadow-md mx-4 md:mx-auto px-8 md:px-12 pb-8 mb-4">
+              <FaUser className="mx-auto text-6xl text-gray-500 relative"
+                style={{ top: '-1.5rem' }} />
+              <h1 className="mx-auto text-center text-2xl font-semibold text-gray-900 pb-4"
+                style={{ fontFamily: 'Nunito' }}>Log In</h1>
+              <div className="formField mb-4">
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 flex items-center pl-2">
+                    <AiOutlineUser className="text-gray-400 text-2xl" />
+                  </div>
+                  <input name="email" type="text" placeholder="Username"
+                    className="w-full pl-10 outline-none rounded bg-gray-100 text-base 
                   transition-all duration-200 ease-in-out py-3 px-4"
-                  ref={register}
-                />
+                    ref={register}
+                  />
+                </div>
                 {errors && <FormError msg={errors?.email?.message} />}
               </div>
-              <div>
-                <label htmlFor="password" className="my-2">Password</label>
-                <input name="password" type="password"
-                  ref={register}
-                  className="outline-none w-full rounded bg-gray-100 text-base
+              <div className="formField">
+                <div className="relative">
+                  <div className="absolute inset-y-0 left-0 flex items-center pl-2">
+                    <AiOutlineLock className="text-gray-400 text-2xl" />
+                  </div>
+                  <input name="password" type="password" placeholder="Password"
+                    ref={register}
+                    className="w-full pl-10 outline-none rounded bg-gray-100 text-base
                    transition-all duration-200 ease-in-out py-3 px-4"/>
+
+                </div>
                 {errors && <FormError msg={errors?.password?.message} />}
               </div>
-
               <div className="flex flex-col mt-4">
                 <button type="submit"
                   className="shadow-md py-3 px-4 text-green-100
