@@ -11,8 +11,8 @@ export default function header({ isSolid, isOpen, handleOpen }) {
   const ctaClass = `px-4 py-2 ${isOpen ? 'hover:bg-opacity-05' : 'cta bg-red-600 text-white rounded-lg ml-4 hover:bg-red-700'}`
   const handleAnchorClick = () => { handleOpen(false) };
   return (
-    <header className={`header ${bgClass} nav w-full px-10 md:px-20 py-3 sticky top-0 left-0 z-50 
-    ${isOpen ? 'h-screen text-gray-700' : 'text-gray-300'}`} id="navbar" >
+    <header className={`header ${bgClass} nav w-full px-10 md:px-20 sticky top-0 left-0 z-50 
+    ${isOpen ? 'h-screen text-gray-700' : 'text-gray-300'} ${isSolid ? 'py-3' : 'py-4'}`} id="navbar" >
       <nav className={isOpen ? '' : `flex items-center justify-between`}>
         <SiteLogo isOpen={isOpen} handleClick={handleAnchorClick} />
         <Hamburger isOpen={isOpen} handleOpen={handleOpen} isSolid={isSolid} />

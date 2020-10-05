@@ -30,7 +30,7 @@ export default function Hero() {
               </a>
               </Link>
               <Link href="/#sections">
-                <a className="bg-gray-600 text-gray-400 hover:bg-gray-700
+                <a className="bg-gray-700 text-gray-400 hover:bg-gray-800
                text-center font-semibold py-3 px-4 mt-4 w-32 sm:w-48 shadow-lg tracking-wider 
                transition duration-300 ease-in">
                   Learn More
