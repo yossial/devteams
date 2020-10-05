@@ -9,6 +9,9 @@ nodemon.json
 # testing
 /coverage
 
+#svg
+/svgs
+
 # config
 /config/dev.js
 

@@ -32,6 +32,7 @@ module.exports = {
       colors: {
         gray: {
           50: '#fbfdfd',
+          750: '#424c5d',
           ...defaultTheme.colors.gray
         },
         red: {
@@ -45,17 +46,18 @@ module.exports = {
       },
       backgroundOpacity: {
         '01': '0.1',
+        '05': '.05',
         '003': '0.03',
       },
-      height: theme => ({
+      minHeight: {
+        'screen91': '91vh',
+      },
+      height: {
         "75": "75vh",
         "85": "85vh",
-        "screen/2": "50vh",
-        "screen/3": "calc(100vh / 3)",
-        "screen/4": "calc(100vh / 4)",
-        "screen/5": "calc(100vh / 5)",
-      }),
-      inset: theme => ({
+      },
+
+      inset: {
         '10': '10%',
         '20': '20%',
         '30': '30%',
@@ -65,14 +67,17 @@ module.exports = {
         '70': '70%',
         '80': '80%',
         '90': '90%',
-      }),
-      zIndex: theme => ({
+      },
+      zIndex: {
         '1': '1'
-      })
-    }
-  },
-  variants: {
-    backgroundColor: ['responsive', 'hover', 'focus'],
-  },
-  plugins: [],
+      },
+      transitionProperty: {
+        'background': 'background-color'
+      }
+    },
+    variants: {
+      backgroundColor: ['responsive', 'hover', 'focus'],
+    },
+    plugins: [],
+  }
 }

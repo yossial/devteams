@@ -7,7 +7,7 @@ export default function signup() {
   return (
     <section className="flex flex-col md:flex-row  items-center justify-around max-w-4xl mx-auto h-full">
       <div className="w-full md:w-5/12">
-        <div className="card bg-white text-center py-10 px-2
+        <div className="card bg-indigo-50 sm:bg-white text-center py-10 px-2 
             hover:bg-indigo-50 transition duration-300 ease-in cursor-pointer">
           <div className="max-w-sm lg:max-w-full overflow-x-hidden">
             <DrawDev />
@@ -25,7 +25,7 @@ export default function signup() {
         </div>
       </div>
       <div className="w-full md:w-5/12">
-        <div className="card bg-white text-center py-10 px-2
+        <div className="card bg-red-50 sm:bg-white text-center py-10 px-2
             hover:bg-red-50 transition duration-300 ease-in cursor-pointer">
           <div className="max-w-sm lg:max-w-full overflow-x-hidden">
             <DrawOrg />

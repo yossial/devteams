@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function hamburger({ isOpen, setIsOpen, isSolid }) {
+export default function hamburger({ isOpen, handleOpen, isSolid }) {
 
   const topClosed = {
     display: "block",
@@ -57,7 +57,7 @@ export default function hamburger({ isOpen, setIsOpen, isSolid }) {
         transform: 'rotate(0deg)',
       }}
         className='md:hidden'
-        onClick={() => setIsOpen(!isOpen)}
+        onClick={() => handleOpen(!isOpen)}
       >
         <span style={isOpen ? topOpen : topClosed}
           className={`${isOpen ? 'bg-black' : 'bg-white'}`}></span>
