@@ -32,6 +32,7 @@ module.exports = {
       colors: {
         gray: {
           50: '#fbfdfd',
+          750: '#424c5d',
           ...defaultTheme.colors.gray
         },
         red: {
