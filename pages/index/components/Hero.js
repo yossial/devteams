@@ -6,8 +6,8 @@ export default function Hero() {
 
   return (
     <>
-      <section className="h-screen sm:h-screen bg-gradient sm:p-0 overflow-hidden">
-        <div className="container flex flex-row items-center justify-around py-4
+      <section className="h-screen bg-gradient sm:p-0 overflow-hidden">
+        <div className="container flex flex-col lg:flex-row items-center justify-center lg:justify-around py-4
          md:py-10 sm:z-1">
           <div className="txt flex flex-col gap-2">
             <h2 className="text-2xl sm:text-xl md:text-3xl font-bold mb-0 xs:mb-2 text-white">
@@ -39,8 +39,8 @@ export default function Hero() {
 
 
           </div>
-          <div className="draw hidden sm:flex sm:w-5/12">
-            <DrawHome />
+          <div className="draw hidden md:flex md:w-5/12">
+            <DrawHome width={500} height={300} />
           </div>
 
         </div>

@@ -1,12 +1,12 @@
 import React from "react";
 
-function DrawHome() {
+function DrawHome({ width, height }) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
       xmlnsXlink="http://www.w3.org/1999/xlink"
-      width="600.11"
-      height="500.57"
+      width={width}
+      height={height}
       data-name="Layer 1"
       viewBox="0 0 1008.11 779.57"
     >

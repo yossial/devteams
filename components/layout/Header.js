@@ -6,7 +6,7 @@ import SiteLogo from '../../components/SiteLogo'
 
 export default function header({ isSolid, isOpen, handleOpen }) {
   const bgClass = isOpen ? 'opened bg-gray-100' : 'bg-gradient';
-  const anchorClass = `px-4 py-2 ${isOpen ? 'hover:bg-black hover:bg-opacity-003' : 'hover:bg-white hover:bg-opacity-01'}`;
+  const anchorClass = `px-3 lg:px-4 py-2 ${isOpen ? 'hover:bg-black hover:bg-opacity-003' : 'hover:bg-white hover:bg-opacity-01'}`;
   const liClass = `${isOpen ? 'py-3 border-b border-gray-400' : ''}`;
   const ctaClass = `px-4 py-2 ${isOpen ? 'hover:bg-opacity-05' : 'cta bg-red-600 text-white rounded-lg ml-4 hover:bg-red-700'}`
   const handleAnchorClick = () => { handleOpen(false) };
