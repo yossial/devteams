@@ -36,5 +36,20 @@
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.4.6"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "contributors": [{
+      "name": "Yossi Alfia",
+      "email": "yossi.alfia@gmail.com",
+      "url": "https://twitter.com/AlfiaYossi",
+      "img": "https://avatars0.githubusercontent.com/u/52635116?s=460&u=2a2740e53c1089e3a8e628ddb28da117aedd0c5c&v=4",
+      "info": [
+        "🔥"
+      ]
+    },
+    {
+      "name": "You?",
+      "img": "https://joeschmoe.io/api/v1/random",
+      "url": "https://github.com/"
+    }
+  ]
 }

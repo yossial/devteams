@@ -2,4 +2,6 @@
 {{ template:title }}
 {{ template:badges }}
 {{ template:description }}
+{{ template:toc }}
+{{ template:contributors }}
 {{ template:license }}
