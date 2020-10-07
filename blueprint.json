@@ -2,14 +2,9 @@
   "text": "including: Tailwindcss",
   "logo": {
     "src": "https://png.pngtree.com/png-clipart/20190916/original/pngtree-flat-wind-in-the-discussion-of-the-business-team-png-image_4594811.jpg",
-    "width": "100"
+    "width": "200"
   },
   "ids": {
     "github": "yossial/devteams"
-  },
-  "badges": [{
-    "alt": "tags",
-    "url": "https://github.com/badges/shields",
-    "img": "https://img.shields.io/badge/custom-badge-f39f37.svg"
-  }]
+  }
 }
