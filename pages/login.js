@@ -3,7 +3,7 @@ import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers';
 import * as yup from "yup";
 import SiteLogo from '../components/SiteLogo'
-import { FaUser } from "react-icons/fa";
+import { MdFingerprint } from "react-icons/md";
 import { AiOutlineUser, AiOutlineLock } from "react-icons/ai";
 
 import FormError from '../components/FormError'
@@ -20,7 +20,6 @@ export default function login() {
     resolver: yupResolver(schema)
   });
   const [serverErrors, setServerErrors] = useState('')
-
   const onSubmit = async (values) => {
     let res = await fetch('/api/login',
       {
@@ -42,39 +41,35 @@ export default function login() {
 
   return (
     <>
-      <section className="flex flex-wrap items-center justify-center h-full">
-        <div className="flex-1 md:flex-initial md:mx-auto md:mt-10 max-w-full md:max-w-2xl">
+      <section className="flex items-center justify-center h-full">
+        <div className="flex-1 md:mx-auto md:mt-10 max-w-full md:max-w-xl">
           <div className="md:container">
             <form onSubmit={handleSubmit(onSubmit)}
               className="bg-white text-sm rounded shadow-md mx-4 md:mx-auto px-8 md:px-12 pb-8 mb-4">
-              <FaUser className="mx-auto text-6xl text-gray-500 relative"
+              <MdFingerprint className="mx-auto text-6xl text-indigo-300 relative"
                 style={{ top: '-1rem' }} />
-              <h1 className="mx-auto text-center text-xl font-semibold text-gray-900"
-                style={{ fontFamily: 'Nunito' }}>DevTeams</h1>
+              <h1 className="brand-txt">DevTeams</h1>
               <h2 className="mx-auto text-center text-lg text-gray-600 pb-5">Welcome Back!</h2>
               <div className="formField mb-4">
-                <div className="relative">
-                  <div className="input-icon">
-                    <AiOutlineUser className="text-gray-400 text-2xl" />
-                  </div>
+                <div className="inputField">
                   <input name="email" type="text" placeholder="Username"
-                    className="w-full pl-10 outline-none rounded bg-gray-100 text-base 
-                  transition-all duration-200 ease-in-out py-3 px-4"
+                    className="form-input w-full"
                     ref={register}
                   />
+                  <div className="input-icon">
+                    <AiOutlineUser size={24} />
+                  </div>
                 </div>
                 {errors && <FormError msg={errors?.email?.message} />}
               </div>
               <div className="formField">
-                <div className="relative">
-                  <div className="input-icon">
-                    <AiOutlineLock className="text-gray-400 text-2xl" />
-                  </div>
+                <div className="inputField">
                   <input name="password" type="password" placeholder="Password"
                     ref={register}
-                    className="w-full pl-10 outline-none rounded bg-gray-100 text-base
-                   transition-all duration-200 ease-in-out py-3 px-4"/>
-
+                    className="form-input w-full" />
+                  <div className="input-icon">
+                    <AiOutlineLock size={24} />
+                  </div>
                 </div>
                 {errors && <FormError msg={errors?.password?.message} />}
               </div>

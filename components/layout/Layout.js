@@ -9,7 +9,7 @@ export default function Layout({ children }) {
   const [isSolid, setIsSolid] = useState(false);
   const [isOpen, setIsOpen] = useState(false)
   const [scrollPos, setScrollpos] = useState(0);
-  const pagesWithHiddenFooter = ['login', 'signup'];
+  const pagesWithHiddenFooter = ['login']//['login', 'signup'];
   let isAuthPages = pagesWithHiddenFooter.indexOf(router.pathname.slice(1)) !== -1
   useEffect(() => {
     window.addEventListener('scroll', function () {
@@ -23,9 +23,13 @@ export default function Layout({ children }) {
   });
 
   return (
-    <div className="min-h-screen">
-      <Header isOpen={isOpen} handleOpen={val => setIsOpen(val)} isSolid={isAuthPages || isSolid} />
-      <div className="mainGrid min-h-screen91">
+    <div className="min-h-screen bg-gray-150">
+      { !isAuthPages &&
+        <Header isOpen={isOpen} handleOpen={val => setIsOpen(val)}
+          isSolid={isSolid} />
+      }
+
+      <div className={`mainGrid ${isAuthPages ? 'h-screen' : 'min-h-screen91'}`}>
         <main className={isOpen ? 'overflow-hidden' : ''}>
           {children}
         </main>
