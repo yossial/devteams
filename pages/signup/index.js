@@ -24,6 +24,7 @@ export default function signup() {
 
         </div>
       </div>
+
       <div className="w-full md:w-5/12">
         <div className="card bg-red-50 sm:bg-white text-center py-10 px-2
             hover:bg-red-50 transition duration-300 ease-in cursor-pointer">

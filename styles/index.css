@@ -10,6 +10,10 @@ body {
   scroll-margin: 0;
 }
 
+body * {
+  @apply transition-colors duration-200 ease-in;
+}
+
 .mainGrid {
   display: grid;
   grid-template-rows: 1fr auto;
@@ -19,8 +23,13 @@ body {
   @apply rounded overflow-hidden shadow-lg;
 }
 
+.brand-txt {
+  @apply text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase text-center;
+}
+
+/*navbar*/
 .nav .active:not(.cta) {
-  @apply text-green-500 font-semibold border-b border-gray-400;
+  @apply text-green-400 font-semibold border-b border-gray-400;
 }
 
 .opened .nav .active:not(.cta) {
@@ -30,11 +39,6 @@ body {
 
 .nav {
   transition: background ease-in-out .2s;
-}
-
-.gradient {
-  position: relative;
-  background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(20, 72, 140, 1) 0%, rgba(7, 121, 222, 1) 90%)
 }
 
 .bg-gradient {
@@ -85,6 +89,37 @@ body {
   bottom: 0;
 }
 
+/* forms */
+.inputField {
+  @apply flex flex-row-reverse;
+}
+
+.form-input {
+  @apply outline-none rounded bg-gray-200 text-base transition-all duration-200 ease-in-out py-3 px-2;
+}
+
+.form-input::placeholder {
+  @apply text-gray-500;
+}
+
 .input-icon {
-  @apply absolute inset-y-0 left-0 flex items-center pl-2 pointer-events-none;
+  @apply flex items-center p-2 pointer-events-none bg-gray-200 text-gray-500;
+}
+
+.formField input:focus,
+.formField input:hover {
+  @apply bg-gray-150;
+}
+
+.formField input {
+  @apply text-gray-700;
+}
+
+.formField input:focus~.input-icon,
+.formField input:hover~.input-icon {
+  @apply bg-gray-150;
+}
+
+.formField input:focus~.input-icon svg {
+  @apply text-indigo-600;
 }

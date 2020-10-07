@@ -6,7 +6,7 @@ export default function FeatureSection() {
     <div className="py-12 bg-white" id="about">
       <div className="max-w-screen-xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="lg:text-center">
-          <p className="text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase">DevTeams</p>
+          <p className="brand-txt">DevTeams</p>
           <h3 className="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl sm:leading-10">
             Invest your time in the right place
       </h3>

@@ -32,6 +32,7 @@ module.exports = {
       colors: {
         gray: {
           50: '#fbfdfd',
+          150: '#f4f7fa',
           750: '#424c5d',
           ...defaultTheme.colors.gray
         },
@@ -77,6 +78,7 @@ module.exports = {
     },
     variants: {
       backgroundColor: ['responsive', 'hover', 'focus'],
+      textColor: ['responsive', 'hover', 'focus', 'group-focus'],
     },
     plugins: [],
   }

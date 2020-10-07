@@ -1,0 +1,16 @@
+{
+  "text": "including: Tailwind.css",
+  "logo": {
+    "src": "https://raw.githubusercontent.com/andreasbm/readme/master/assets/logo-shadow.png",
+    "width": "150"
+  },
+  "ids": {
+    "github": "andreasbm/readme",
+    "npm": "@appnest/readme"
+  },
+  "badges": [{
+    "alt": "Custom badge",
+    "url": "https://github.com/badges/shields",
+    "img": "https://img.shields.io/badge/custom-badge-f39f37.svg"
+  }]
+}
