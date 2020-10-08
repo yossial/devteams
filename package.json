@@ -17,7 +17,9 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "glob": "^7.1.6",
+    "imagemin-mozjpeg": "^9.0.0",
     "jsonwebtoken": "^8.5.1",
+    "lqip-loader": "^2.2.1",
     "mongoose": "^5.10.7",
     "next": "9.4.4",
     "next-compose-plugins": "^2.2.0",
@@ -29,7 +31,10 @@
     "react-hook-form": "^6.8.6",
     "react-icons": "^3.10.0",
     "recoil": "0.0.13",
+    "responsive-loader": "^2.1.1",
+    "sharp": "^0.26.1",
     "validator": "^13.1.17",
+    "webp-loader": "^0.6.0",
     "yup": "^0.29.3"
   },
   "devDependencies": {
@@ -38,9 +43,12 @@
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.4.6"
   },
-  "cacheDirectories": [".next/cache"],
+  "cacheDirectories": [
+    ".next/cache"
+  ],
   "license": "MIT",
-  "contributors": [{
+  "contributors": [
+    {
       "name": "Yossi Alfia",
       "email": "yossi.alfia@gmail.com",
       "url": "https://twitter.com/AlfiaYossi",
