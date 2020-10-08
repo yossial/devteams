@@ -38,9 +38,9 @@
     "postcss-preset-env": "^6.7.0",
     "tailwindcss": "^1.4.6"
   },
+  "cacheDirectories": [".next/cache"],
   "license": "MIT",
-  "contributors": [
-    {
+  "contributors": [{
       "name": "Yossi Alfia",
       "email": "yossi.alfia@gmail.com",
       "url": "https://twitter.com/AlfiaYossi",
