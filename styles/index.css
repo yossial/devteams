@@ -42,8 +42,8 @@ body * {
 }
 
 .bg-cover {
-  /* @apply bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900; */
-  background-image: url('/static/Joy.jpg');
+  background-color: #2c5282;
+  background-image: url('/images/Joy.jpg?resize&size=300');
   background-size: cover;
 }
 
@@ -123,7 +123,7 @@ img.dev-signup {
   @apply uppercase tracking-wide text-base;
 }
 
-.input-field:focus+span {
+.input-field:focus+.input-icon {
   @apply text-indigo-500;
 }
 

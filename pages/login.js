@@ -64,9 +64,9 @@ export default function login() {
                 <input name="password" type="password" placeholder="Password"
                   ref={register}
                   className="input-field focus:bg-gray-200 hover:bg-gray-200 w-full" />
-                <div className="input-icon">
+                <span className="input-icon">
                   <AiOutlineLock size={24} />
-                </div>
+                </span>
                 {errors && <FormError msg={errors?.password?.message} />}
               </div>
               <div className="flex flex-col mt-4">
