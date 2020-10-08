@@ -1,13 +1,11 @@
-module.exports = {
-  webpack(config) {
-    config.module.rules.push({
-      test: /\.svg$/,
-      issuer: {
-        test: /\.(js|ts)x?$/,
-      },
-      use: ['@svgr/webpack'],
-    });
+const withPlugins = require('next-compose-plugins');
+const optimizedImages = require('next-optimized-images');
 
-    return config;
-  },
-};
+module.exports = withPlugins([
+  [optimizedImages, {
+    /* config for next-optimized-images */
+  }],
+
+
+]);
+
