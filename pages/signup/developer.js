@@ -4,7 +4,7 @@ import { yupResolver } from '@hookform/resolvers';
 import * as yup from "yup";
 import { AiOutlineUser } from "react-icons/ai";
 
-import FormError from '../components/FormError'
+import FormError from '../../components/FormError'
 
 const schema = yup.object().shape({
   fname: yup.string().required(),
