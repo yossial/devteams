@@ -45,6 +45,16 @@ module.exports = {
           ...defaultTheme.colors.indigo
         }
       },
+      spacing: {
+        '2-5': '0.625rem'
+      },
+      maxHeight: {
+        '0': '0',
+        '1/4': '25%',
+        '1/2': '50%',
+        '3/4': '75%',
+        'full': '100%',
+      },
       backgroundOpacity: {
         '01': '0.1',
         '05': '.05',
@@ -70,7 +80,8 @@ module.exports = {
         '90': '90%',
       },
       zIndex: {
-        '1': '1'
+        '1': 1,
+        '99999': 99999
       },
       transitionProperty: {
         'background': 'background-color'
@@ -78,7 +89,7 @@ module.exports = {
     },
     variants: {
       backgroundColor: ['responsive', 'hover', 'focus'],
-      textColor: ['responsive', 'hover', 'focus', 'group-focus'],
+      textColor: ['responsive', 'hover', 'focus', 'group-focus', 'focus-within'],
     },
     plugins: [],
   }

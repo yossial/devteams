@@ -1,5 +1,5 @@
 import React from 'react'
-import Hero from './components/Hero'
+import Hero from './sections/Hero'
 import SectionsList from './sections/SectionsList'
 
 export default function index() {

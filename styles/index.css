@@ -11,7 +11,7 @@ body {
 }
 
 body * {
-  @apply transition-colors duration-200 ease-in;
+  @apply transition-colors duration-150 ease-in;
 }
 
 .mainGrid {
@@ -24,7 +24,7 @@ body * {
 }
 
 .brand-txt {
-  @apply text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase text-center;
+  @apply text-base leading-6 text-indigo-600 font-semibold tracking-wide uppercase;
 }
 
 /*navbar*/
@@ -41,14 +41,33 @@ body * {
   transition: background ease-in-out .2s;
 }
 
-.bg-gradient {
-  background: #2c5282;
-  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #004e92, #020949);
-  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #004e92, #020949);
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.bg-cover {
+  /* @apply bg-gradient-to-r from-blue-700 via-blue-800 to-blue-900; */
+  background-image: url('/static/Joy.jpg');
+  background-size: cover;
+}
 
+.bg-transparent {
+  background: transparent;
+}
+
+.bg-solid {
+  background-color: rgba(0, 0, 0, 0.8)
+}
+
+.wrap {
+  position: relative;
+}
+
+.wrap:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.33);
+  z-index: 9;
 }
 
 .vertical.divider {
@@ -89,37 +108,29 @@ body * {
   bottom: 0;
 }
 
+img.dev-signup {
+  width: -webkit-fill-available;
+  height: -webkit-fill-available;
+}
+
 /* forms */
-.inputField {
-  @apply flex flex-row-reverse;
+
+.form-main-title {
+  @apply uppercase tracking-wide text-sm mb-6;
 }
 
-.form-input {
-  @apply outline-none rounded bg-gray-200 text-base transition-all duration-200 ease-in-out py-3 px-2;
+.form-section-title {
+  @apply uppercase tracking-wide text-base;
 }
 
-.form-input::placeholder {
-  @apply text-gray-500;
+.input-field:focus+span {
+  @apply text-indigo-500;
+}
+
+.input-field {
+  @apply py-2-5 text-sm bg-gray-150 rounded-md pl-10 outline-none;
 }
 
 .input-icon {
-  @apply flex items-center p-2 pointer-events-none bg-gray-200 text-gray-500;
-}
-
-.formField input:focus,
-.formField input:hover {
-  @apply bg-gray-150;
-}
-
-.formField input {
-  @apply text-gray-700;
-}
-
-.formField input:focus~.input-icon,
-.formField input:hover~.input-icon {
-  @apply bg-gray-150;
-}
-
-.formField input:focus~.input-icon svg {
-  @apply text-indigo-600;
+  @apply py-2-5 absolute inset-y-0 left-0 pl-2 text-gray-500;
 }
