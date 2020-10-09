@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useRef, useState } from 'react'
 import { useForm } from "react-hook-form";
 import { yupResolver } from '@hookform/resolvers';
 import * as yup from "yup";
@@ -16,12 +16,27 @@ const schema = yup.object().shape({
 });
 
 export default function developer() {
+  const [loaded, setLoaded] = useState(false)
+  const image = useRef()
+  const handleLoad = () => setLoaded(true)
+  useEffect(() => {
+    debugger;
+    if (image.current.complete) setLoaded(true);
+  }, [])
+
   return (
-    <div className="lg:flex h-full">
-      <div className="hidden lg:block lg:w-1/3">
-        <img src="/static/signup.jpg" alt="signup" id="dev-signup" />
+    <div className="container flex items-center justify-center h-screen">
+      <div className="hidden lg:block lg:w-1/3 h-85">
+        <img src={require('../../static/signup.jpg')} alt="signup"
+          className="object-cover h-full" ref={image} onLoad={handleLoad}
+          style={{ display: !loaded ? 'none' : '' }}
+        />
+        <img src={require('../../static/signup.jpg?lqip')} alt="signup"
+          className="object-cover h-full blur"
+          style={{ display: loaded ? 'none' : '' }}
+        />
       </div>
-      <main className="flex-1 bg-gray-200 w-full lg:w-3/5">
+      <main className="flex-1 bg-gray-200 w-full lg:w-2/3 h-85">
         <section className="bg-white h-full p-12 mx-8 lg:mx-0">
           <div className="lg:flex lg:flex-col">
             <h1 className="brand-txt lg:text-xl mb-2">DevTeams</h1>
@@ -29,27 +44,30 @@ export default function developer() {
           </div>
           <form>
             <div className="lg:flex mb-8">
-              <div className="lg:w-1/3">
+              <div className="lg:w-1/3 mt-8">
                 <legend className="form-section-title">User Details</legend>
                 <p className="text-sm font-light text-red">This entire section is required.</p>
               </div>
-              <div className="lg:w-2/3 ml-8">
-                <div className="lg:flex items-start">
+              <div className="lg:w-2/3 ml-8 mt-8">
+                <div className="lg:flex items-center">
                   <div className="w-1/2">
                     <div className="relative">
-                      <input type="text" className="input-field focus:bg-gray-200 hover:bg-gray-200"
+                      <input name="fname" type="text"
+                        className="input-field focus:bg-gray-200 hover:bg-gray-200"
                         placeholder="First Name" autoComplete="off" />
                       <span className="input-icon">
-                        <AiOutlineUser size={24} />
+                        <AiOutlineUser size={20} />
                       </span>
                     </div>
 
                   </div>
                   <div className="formField w-1/2">
                     <div className="relative">
-                      <input type="text" className="input-field focus:bg-gray-200 hover:bg-gray-200" placeholder="First Name" autoComplete="off" />
+                      <input name="lname" type="text"
+                        className="input-field focus:bg-gray-200 hover:bg-gray-200"
+                        placeholder="Last Name" autoComplete="off" />
                       <span className="input-icon">
-                        <AiOutlineUser size={24} />
+                        <AiOutlineUser size={20} />
                       </span>
                     </div>
                   </div>
@@ -57,10 +75,11 @@ export default function developer() {
                 <div className="lg:flex">
                   <div className="formField my-2 lg:w-full">
                     <div className="relative">
-                      <input type="text" className="input-field focus:bg-gray-200 hover:bg-gray-200"
-                        placeholder="First Name" autoComplete="off" />
+                      <input name="email" type="email"
+                        className="input-field focus:bg-gray-200 hover:bg-gray-200"
+                        placeholder="Email Address" autoComplete="off" />
                       <span className="input-icon">
-                        <AiOutlineUser size={24} />
+                        <AiOutlineUser size={20} />
                       </span>
                     </div>
                   </div>

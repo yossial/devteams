@@ -41,18 +41,24 @@ body * {
   transition: background ease-in-out .2s;
 }
 
-.bg-cover {
-  background-color: #2c5282;
-  background-image: url('/images/Joy.jpg?resize&size=300');
-  background-size: cover;
-}
-
 .bg-transparent {
   background: transparent;
 }
 
 .bg-solid {
   background-color: rgba(0, 0, 0, 0.8)
+}
+
+img.webkit-full {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  border: 0 none;
+}
+
+img.blur {
+  filter: blur(1vw);
 }
 
 .wrap {
