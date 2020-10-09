@@ -4,7 +4,7 @@
   "description": "A Next.js / React.js / Node(Express) Project;",
   "private": true,
   "scripts": {
-    "dev": "nodemon server.js",
+    "dev": "nodemon --watch server.js --watch styles --watch *.config.js --watch config/* server.js",
     "build": "next build",
     "start": "node server.js",
     "heroku-postbuild": "npm run build"
