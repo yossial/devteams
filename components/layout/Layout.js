@@ -2,21 +2,25 @@ import React, { useState, useEffect, useRef } from 'react';
 import Header from './Header';
 import Footer from './Footer';
 import { useRouter } from "next/router";
+import Link from '../Link';
+import NavBackHome from '../NavBackHome';
 
 const tinyImgSrc = require('../../static/cover.jpg?lqip-colors');
 const imgSrc = require('../../static/cover.jpg');
 
 export default function Layout({ children }) {
-  const router = useRouter();
   const [isActive, setisActive] = useState(false);
   const [isSolid, setIsSolid] = useState(false);
   const [isOpen, setIsOpen] = useState(false)
   const [scrollPos, setScrollpos] = useState(0);
   const [bgImgSrc, setBgImgSrc] = useState(null);
-  const image = useRef()
-  const authPages = ['login', 'signup', 'signup/developer', 'signup/organization'];
-  let isAuthPages = authPages.indexOf(router.pathname.slice(1)) !== -1
 
+  const router = useRouter();
+  const image = useRef()
+  const pageName = router.pathname.slice(1);
+  const authPages = ['login', 'signup', 'signup/developer', 'signup/organization'];
+  let isAuthPages = authPages.indexOf(pageName) !== -1
+  console.log(pageName);
   useEffect(() => {
     const imageLoader = new Image();
     imageLoader.src = imgSrc.src;
@@ -48,7 +52,7 @@ export default function Layout({ children }) {
         }}
         ref={image}>
         <main className={isOpen ? 'overflow-hidden' : ''}>
-          {!isAuthPages &&
+          {isAuthPages ? <NavBackHome /> :
             <Header isOpen={isOpen} handleOpen={val => setIsOpen(val)}
               isSolid={isSolid} />
           }

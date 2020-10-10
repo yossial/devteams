@@ -16,7 +16,7 @@ export default function signup() {
             <h1 className="text-3xl font-semibold pt-6 py-4">Developer</h1>
             <p className="pb-6">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dignissimos, eum.</p>
             <Link href="/signup/developer">
-              <a className="bg-indigo-600 hover:bg-indigo-700 text-center text-white font-semibold py-3 px-4 shadow-lg tracking-wider">
+              <a className="btn-primary">
                 Start Here
                 </a>
             </Link>
@@ -35,7 +35,7 @@ export default function signup() {
             <h1 className="text-3xl font-semibold pt-6 py-4">Organization</h1>
             <p className="pb-6">Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam harum omnis iure.</p>
             <Link href="/signup/organization">
-              <a className="bg-red-600 hover:bg-red-700 text-center text-white font-semibold py-3 px-4 shadow-lg tracking-wider">
+              <a className="btn-secondary">
                 Start Here
                   </a>
             </Link>

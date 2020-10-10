@@ -66,6 +66,21 @@ img {
   -webkit-transition: 1s -webkit-filter linear;
 }
 
+.btn-primary {
+  @apply bg-indigo-600 text-center text-white font-semibold py-3 px-4 shadow-lg tracking-wider;
+}
+
+.btn-primary:hover {
+  @apply bg-indigo-700;
+}
+
+.btn-secondary {
+  @apply bg-red-600 text-center text-white font-semibold py-3 px-4 shadow-lg tracking-wider;
+}
+
+.btn-secondary:hover {
+  @apply bg-red-700;
+}
 
 .wrap {
   position: relative;
