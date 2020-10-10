@@ -3,7 +3,7 @@ import Header from './Header';
 import Footer from './Footer';
 import { useRouter } from "next/router";
 
-const tinyImgSrc = require('../../static/signup.jpg?lqip');
+const tinyImgSrc = require('../../static/cover.jpg?lqip-colors');
 const imgSrc = require('../../static/cover.jpg');
 
 export default function Layout({ children }) {
@@ -14,7 +14,6 @@ export default function Layout({ children }) {
   const [scrollPos, setScrollpos] = useState(0);
   const [bgImgSrc, setBgImgSrc] = useState(null);
   const image = useRef()
-  const handleLoad = () => setLoaded(true)
   const authPages = ['login', 'signup', 'signup/developer', 'signup/organization'];
   let isAuthPages = authPages.indexOf(router.pathname.slice(1)) !== -1
 
@@ -26,6 +25,7 @@ export default function Layout({ children }) {
     };
 
   }, [])
+
   useEffect(() => {
     window.addEventListener('scroll', function () {
       setScrollpos(window.scrollY);
@@ -46,8 +46,7 @@ export default function Layout({ children }) {
           backgroundSize: 'cover',
           transition: 'background-image .3s ease-in'
         }}
-        ref={image}
-      >
+        ref={image}>
         <main className={isOpen ? 'overflow-hidden' : ''}>
           {!isAuthPages &&
             <Header isOpen={isOpen} handleOpen={val => setIsOpen(val)}
