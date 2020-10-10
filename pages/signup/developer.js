@@ -5,6 +5,10 @@ import * as yup from "yup";
 import { AiOutlineUser } from "react-icons/ai";
 
 import FormError from '../../components/FormError'
+import LazyImg from '../../components/LazyImg';
+
+const tinyImgSrc = require('../../static/signup.jpg?lqip');
+const imgSrc = require('../../static/signup.jpg');
 
 const schema = yup.object().shape({
   fname: yup.string().required(),
@@ -16,25 +20,10 @@ const schema = yup.object().shape({
 });
 
 export default function developer() {
-  const [loaded, setLoaded] = useState(false)
-  const image = useRef()
-  const handleLoad = () => setLoaded(true)
-  useEffect(() => {
-    debugger;
-    if (image.current.complete) setLoaded(true);
-  }, [])
-
   return (
     <div className="container flex items-center justify-center h-screen">
       <div className="hidden lg:block lg:w-1/3 h-85">
-        <img src={require('../../static/signup.jpg')} alt="signup"
-          className="object-cover h-full" ref={image} onLoad={handleLoad}
-          style={{ display: !loaded ? 'none' : '' }}
-        />
-        <img src={require('../../static/signup.jpg?lqip')} alt="signup"
-          className="object-cover h-full blur"
-          style={{ display: loaded ? 'none' : '' }}
-        />
+        <LazyImg imgSrc={imgSrc} tinyImgSrc={tinyImgSrc} alt="signup" className="object-cover h-full" />
       </div>
       <main className="flex-1 bg-gray-200 w-full lg:w-2/3 h-85">
         <section className="bg-white h-full p-12 mx-8 lg:mx-0">
