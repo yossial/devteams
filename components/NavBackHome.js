@@ -4,7 +4,7 @@ import { BsBoxArrowLeft } from 'react-icons/bs'
 
 export default function NavBackHome() {
   return (
-    <header className="nav w-full px-10 h-4">
+    <header className="nav w-full px-4 sm:px-10 h-0 sm:h-4">
       <nav className="flex items-center justify-between">
         <ul className="flex flex-col md:flex-row w-full">
           <li className="py-3">
