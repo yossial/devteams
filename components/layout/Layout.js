@@ -20,7 +20,6 @@ export default function Layout({ children }) {
   const pageName = router.pathname.slice(1);
   const authPages = ['login', 'signup', 'signup/developer', 'signup/organization'];
   let isAuthPages = authPages.indexOf(pageName) !== -1
-  console.log(pageName);
   useEffect(() => {
     const imageLoader = new Image();
     imageLoader.src = imgSrc.src;
@@ -48,6 +47,7 @@ export default function Layout({ children }) {
           backgroundColor: '#2c5282',
           backgroundImage: `url(${bgImgSrc || tinyImgSrc.src})`,
           backgroundSize: 'cover',
+          backgroundPosition: 'center',
           transition: 'background-image .3s ease-in'
         }}
         ref={image}>
