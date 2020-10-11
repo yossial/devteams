@@ -21,25 +21,26 @@ const schema = yup.object().shape({
 
 export default function developer() {
   return (
-    <div className="container flex items-center justify-center h-screen">
-      <div className="hidden lg:block lg:w-1/3 h-85">
+    <div className="sm:container flex items-center justify-center h-screen">
+      <div className="hidden sm:block w-full sm:w-1/3 h-85">
         <LazyImg imgSrc={imgSrc} tinyImgSrc={tinyImgSrc} alt="signup" className="object-cover h-full" />
       </div>
-      <main className="flex-1 bg-gray-200 w-full lg:w-2/3 h-85">
-        <section className="bg-white h-full p-12 mx-8 lg:mx-0">
-          <div className="lg:flex lg:flex-col">
-            <h1 className="brand-txt lg:text-xl mb-2">DevTeams</h1>
-            <h2 className="form-main-title lg:w-1/3 sm:text-lg">Create New Developer</h2>
+      <main className="flex-1 bg-gray-200 w-full sm:w-2/3 h-85">
+        <section className="bg-white h-full p-12 mx-8 sm:mx-0">
+          <div className="sm:flex sm:flex-col">
+            <h1 className="brand-txt sm:text-xl mb-2">DevTeams</h1>
+            <h2 className="form-main-title sm:w-1/3 sm:text-md">Create New User</h2>
           </div>
-          <form>
-            <div className="lg:flex mb-8">
-              <div className="lg:w-1/3 mt-8">
+          <form className="flex-1 w-full">
+            <div className="mb-8">
+              <div className="mt-8 mb-4">
                 <legend className="form-section-title">User Details</legend>
                 <p className="text-sm font-light text-red">This entire section is required.</p>
               </div>
-              <div className="lg:w-2/3 ml-8 mt-8">
-                <div className="lg:flex items-center">
-                  <div className="w-1/2">
+              <div className="my-4" id="form-fields">
+                <div className="form-row lg:w-3/5 lg:grid"
+                  style={{ alignContent: 'start', justifyContent: 'start' }}>
+                  <div className="my-2">
                     <div className="relative">
                       <input name="fname" type="text"
                         className="input-field focus:bg-gray-200 hover:bg-gray-200"
@@ -50,7 +51,7 @@ export default function developer() {
                     </div>
 
                   </div>
-                  <div className="formField w-1/2">
+                  <div className="my-2">
                     <div className="relative">
                       <input name="lname" type="text"
                         className="input-field focus:bg-gray-200 hover:bg-gray-200"
@@ -61,8 +62,8 @@ export default function developer() {
                     </div>
                   </div>
                 </div>
-                <div className="lg:flex">
-                  <div className="formField my-2 lg:w-full">
+                <div className="form-row lg:w-3/5 lg lg:grid overflow-hidden">
+                  <div className="my-2">
                     <div className="relative">
                       <input name="email" type="email"
                         className="input-field focus:bg-gray-200 hover:bg-gray-200"

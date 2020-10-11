@@ -16,7 +16,7 @@ export default function header({ isSolid, isOpen, handleOpen }) {
     <header className={`header ${navBgColor} nav w-full px-10 md:px-20 fixed top-0 left-0 z-50 
     ${isOpen ? 'h-screen text-gray-700' : 'text-gray-300'} ${isSolid ? 'py-3' : 'py-4'}`}
       id="navbar" >
-      <nav className={isOpen ? '' : `flex items-center justify-between`}>
+      <nav className={isOpen ? 'open' : `flex items-center justify-between`}>
         <SiteLogo isOpen={isOpen} handleClick={handleAnchorClick} />
         <Hamburger isOpen={isOpen} handleOpen={handleOpen} isSolid={isSolid} />
         <div className={`md:flex align-middle items-center ${isOpen ? 'flex mt-12 text-lg' : 'hidden'}`}>

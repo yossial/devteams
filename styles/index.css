@@ -28,12 +28,12 @@ body * {
 }
 
 /*navbar*/
-.nav .active:not(.cta) {
-  @apply text-green-400 font-semibold border-b border-gray-400;
+nav .active:not(.cta) {
+  @apply text-orange-500 font-semibold border-b border-gray-400;
 }
 
-.opened .nav .active:not(.cta) {
-  @apply border-transparent text-green-500;
+nav.open .active {
+  @apply border-none text-orange-500;
 }
 
 
@@ -142,8 +142,12 @@ img.dev-signup {
 
 /* forms */
 
+.form-row {
+  @apply grid-flow-col gap-4 my-2;
+}
+
 .form-main-title {
-  @apply uppercase tracking-wide text-sm mb-6;
+  @apply uppercase tracking-wide text-sm mb-2;
 }
 
 .form-section-title {
@@ -155,7 +159,7 @@ img.dev-signup {
 }
 
 .input-field {
-  @apply py-2-5 text-sm bg-gray-150 rounded-md pl-10 outline-none;
+  @apply py-2-5 text-sm bg-gray-150 rounded-md pl-10 outline-none w-full;
 }
 
 .input-icon {
