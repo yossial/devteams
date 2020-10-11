@@ -42,7 +42,7 @@ export default function Layout({ children }) {
 
   return (
     <div>
-      <div className={`mainGrid h-screen ${isAuthPages ? 'bg-gray-150' : ''}`}
+      <div className={`mainGrid h-screen ${isAuthPages ? 'bg-gray-200' : ''}`}
         style={isAuthPages ? null : {
           backgroundColor: '#2c5282',
           backgroundImage: `url(${bgImgSrc || tinyImgSrc.src})`,
