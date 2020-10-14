@@ -1,4 +1,5 @@
 import React from "react";
+import Typewriter from "typewriter-effect";
 import DrawHome from "../../../components/draw/DrawHome";
 import Link from "../../../components/Link";
 
@@ -10,14 +11,14 @@ export default function Hero() {
           className="container flex flex-col lg:flex-row items-center justify-center lg:justify-around py-4
          md:py-10 min-h-screen91"
         >
-          <div className="txt flex flex-col gap-2 z-20">
-            <h2 className="text-2xl md:text-3xl font-bold mb-0 xs:mb-2 text-white">
-              Make the best out of your free time helping others
+          <div className="txt flex flex-col md:gap-1 z-20">
+            <h2 className="text-2xl md:text-3xl font-bold my-4 text-white">
+              The best way to spend your free time is by helping others
             </h2>
             <h3 className="text-xl md:text-2xl mb-2 text-gray-150">
-              Use your skills to assist non-profit organizations
+              Use your knowledge to assist non profit organizations
             </h3>
-            <section className="my-4 text-xl max-w-md md:max-w-3xl text-gray-150 sm:leading-8">
+            <section className="flex flex-col gap-2 md:gap-1 my-4 text-xl max-w-md md:max-w-3xl text-gray-150 sm:leading-8">
               <h4>
                 Gain valuable experience in software development and project
                 management.
@@ -31,9 +32,16 @@ export default function Hero() {
                 better life.
               </h4>
             </section>
-            <div className="mt-4">
+            <Typewriter
+              options={{
+                strings: ["Develop.", "Collaborate.", "Contribute."],
+                autoStart: true,
+                loop: true,
+              }}
+            />
+            <div className="md:mt-4">
               <strong className="pt-8 text-xl sm:text-lg text-gray-200">
-                Time is the most valuable thing, dont waste it, start today!
+                Join our community. start today!
               </strong>
             </div>
             <div className="flex flex-row gap-2">

@@ -1,33 +1,9 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcrypt");
-const { isEmail } = require("validator");
 
 const userSchema = new mongoose.Schema({
-  firstName: {
-    type: String,
-    required: [true, "First Name is required"],
-    lowercase: true,
-  },
-  lastName: {
-    type: String,
-    required: [true, "Last Name is required"],
-    lowercase: true,
-  },
-  email: {
-    type: String,
-    required: [true, "Email is required"],
-    unique: true,
-    lowercase: true,
-    validate: [isEmail, "Please enter a valid email address"],
-  },
-  password: {
-    type: String,
-    required: [true, "Password is required"],
-    minlength: [8, "password length should be at list 8 characters"],
-  },
-  role: {
-    type: String,
-    enum: ["developer", "organization"],
+  userId: {
+    type: Schema.Types.ObjectId,
+    ref: "Ingredient",
   },
 });
 

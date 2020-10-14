@@ -61,10 +61,6 @@ nav.open .active {
   transition: background ease-in-out 0.2s;
 }
 
-.bg-transparent {
-  background: transparent;
-}
-
 .bg-solid {
   background-color: rgba(18, 37, 61, 0.8);
 }
@@ -113,8 +109,20 @@ img {
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(18, 37, 61, 0.9);
+  background: rgba(18, 37, 61, 0.85);
   z-index: 9;
+}
+
+.Typewriter__wrapper {
+  @apply bg-transparent text-orange-500 font-semibold text-2xl outline-none font-sansita;
+}
+
+.Typewriter__cursor {
+  @apply bg-transparent text-white text-2xl;
+}
+
+.font-sansita {
+  font-family: "Sansita Swashed";
 }
 
 .vertical.divider {
