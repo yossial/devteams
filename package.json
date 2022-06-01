@@ -33,7 +33,7 @@
     "react-icons": "^3.10.0",
     "recoil": "0.0.13",
     "responsive-loader": "^2.1.1",
-    "sharp": "^0.26.1",
+    "sharp": "^0.30.5",
     "typewriter-effect": "^2.13.1",
     "validator": "^13.1.17",
     "webp-loader": "^0.6.0",
